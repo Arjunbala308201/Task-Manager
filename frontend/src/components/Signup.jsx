@@ -30,7 +30,7 @@ export const Signup = () => {
                 if(response.data.toast==='success'){
                     console.log(response.data)
                     toast.success(response.data.message)
-                    dispatch(setUser(response.data.message))
+                    dispatch(setUser(response.data.data))
                     navigate('/home')
                 }
                 if(response.data.toast=='warning'){
