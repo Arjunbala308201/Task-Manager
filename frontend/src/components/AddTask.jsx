@@ -33,7 +33,7 @@ export const AddTask = () => {
         } else{
             try {
                 console.log(userId,'uerid')
-                const response = await axios.post(`http://localhost:4000/task/${userId}/add`, data);
+                const response = await axios.post(`https://task-manager-3-s6g7.onrender.com//task/${userId}/add`, data);
                 if (response.data.message === 'toDo validation failed: dueDate: Due date must not be earlier than today.') {
                     toast.error('Deadline must not be earlier than today');
                 } else {

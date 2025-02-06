@@ -26,7 +26,7 @@ export const Signup = () => {
         console.log(formData,'will send ot api')
         if(formData.email.trim()!==''||formData.password.trim()!==''){
             try {
-                const response = await axios.post(`http://localhost:4000/guest/signup`,formData)
+                const response = await axios.post(`https://task-manager-3-s6g7.onrender.com/guest/signup`,formData)
                 if(response.data.toast==='success'){
                     console.log(response.data)
                     toast.success(response.data.message)

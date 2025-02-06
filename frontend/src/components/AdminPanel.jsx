@@ -18,7 +18,7 @@ export const AdminPanel = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/admin/fetch`);
+            const response = await axios.get(`https://task-manager-3-s6g7.onrender.com/admin/fetch`);
             setData(response.data.data);
             console.log('response',response);
         } catch (error) {
@@ -28,7 +28,7 @@ export const AdminPanel = () => {
     const deleteUser =async(id)=>{
         try {
             console.log(id,'from functino')
-            const response = await axios.delete(`http://localhost:4000/admin/delete/${id}`)
+            const response = await axios.delete(`https://task-manager-3-s6g7.onrender.com/admin/delete/${id}`)
             console.log(response.data,'response data')
             fetchTasks()
             toast.success('User Deleted')

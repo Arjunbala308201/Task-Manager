@@ -19,7 +19,7 @@
         const fetchTasks = async () => {
             try {
                 console.log(search,'search');
-                const response = await axios.get(`http://localhost:4000/task/fetch/${userId}?search=${search}`);
+                const response = await axios.get(`https://task-manager-3-s6g7.onrender.com/task/fetch/${userId}?search=${search}`);
                 setData(response.data.data);
                 console.log('response',response);
             } catch (error) {

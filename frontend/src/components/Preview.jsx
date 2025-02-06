@@ -24,7 +24,7 @@ export const Preview = () => {
     }
     const fetchDatabyId = async()=>{
         try {
-            const response = await axios.get(`http://localhost:4000/task/fetchbyid/${id}`)
+            const response = await axios.get(`https://task-manager-3-s6g7.onrender.com/task/fetchbyid/${id}`)
             console.log(response.data.data)
             const specificTask = response.data.data[0]
             console.log(specificTask)
@@ -41,7 +41,7 @@ export const Preview = () => {
 
     const updateTask = async()=>{
         try {
-            const response = await axios.put(`http://localhost:4000/task/${id}/update`,updatedValue)
+            const response = await axios.put(`https://task-manager-3-s6g7.onrender.com/task/${id}/update`,updatedValue)
             console.log(response.data.data);
             console.log(response.data.message);
             toast.success(response.data.message|| 'Updated')
@@ -55,7 +55,7 @@ export const Preview = () => {
 
     const deleteTask = async()=>{
         try {
-            const response = await axios.delete(`http://localhost:4000/task/${id}/delete`)
+            const response = await axios.delete(`https://task-manager-3-s6g7.onrender.com/task/${id}/delete`)
             // console.log(response.data.data);
             // console.log(response.data.message);
             toast.success(response.data.message)
